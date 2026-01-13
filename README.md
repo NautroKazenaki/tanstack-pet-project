@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# 🎵 TanStack Pet Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Pet-проект для изучения современного стека React-технологий с применением Feature-Sliced Design
 
-Currently, two official plugins are available:
+## 🚀 Быстрый старт
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Установка зависимостей
+npm install
 
-## React Compiler
+# Запуск dev-сервера
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Генерация API типов (если нужно обновить)
+npm run api:gen
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Основные технологии
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React 19** - UI библиотека
+- **TypeScript** - статическая типизация
+- **Vite** - быстрый сборщик
+- **TanStack Router** - файловый роутинг с типизацией
+- **TanStack Query** - управление серверным состоянием
+- **OpenAPI Fetch** - типизированные HTTP запросы
+- **CSS Modules** - изолированные стили
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📖 Документация
+
+**→ [Полная документация проекта](./DOCS.md)** ←
+
+В документации вы найдёте:
+- 🏗 Архитектуру проекта (Feature-Sliced Design)
+- 📚 Подробное описание каждой технологии
+- 💡 Примеры кода и паттерны
+- 🐛 Решения типичных проблем
+- ✅ Чеклисты для добавления новых фич
+
+## 📁 Структура проекта (FSD)
+
 ```
+src/
+├── app/          # Инициализация (роуты, провайдеры, стили)
+├── pages/        # Страницы (композиция фич)
+├── features/     # Фичи (бизнес-логика)
+└── shared/       # Общий код (UI, API, утилиты)
+```
+
+## 🎯 Цель проекта
+
+Этот проект создан для практического изучения:
+- TanStack экосистемы (Router + Query)
+- Feature-Sliced Design архитектуры
+- TypeScript best practices
+- Современных паттернов React
+
+## 📝 Полезные команды
+
+```bash
+npm run dev       # Разработка
+npm run build     # Production сборка
+npm run lint      # Проверка кода
+npm run api:gen   # Обновление API типов
+```
+
+## 🔗 Полезные ссылки
+
+- [TanStack Router Docs](https://tanstack.com/router/latest)
+- [TanStack Query Docs](https://tanstack.com/query/latest)
+- [Feature-Sliced Design](https://feature-sliced.design/ru/)
+- [OpenAPI TypeScript](https://openapi-ts.dev/)
+
+---
+
+*Создано для обучения • 2026*
